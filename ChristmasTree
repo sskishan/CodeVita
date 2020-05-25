@@ -1,0 +1,22 @@
+n=int(input())
+for _ in range(n):
+    lines=int(input())
+    if(lines<=1):
+        print("You cannot generate christmas tree")
+        continue
+    if(lines>20):
+        print("Tree is no more")
+        continue
+    for i in range(1,lines+2):
+        print((lines+1-i)*" "+"*"*(2*i-1))
+    k=0
+    for i in range(lines-1,1,-1):
+        for j in range(1,i+1):
+            print(" "*k+(i-j+1)*" "+"*"*(2*j+1))
+        k+=1
+    for i in range(1,3):
+        print(" "*(lines)+"*")
+
+
+
+
