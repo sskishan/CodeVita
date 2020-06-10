@@ -1,0 +1,20 @@
+n=int(input())
+t=float(input())
+t=round(t,2)
+val=(n/360)*t
+hours=int(val)
+minutes=(val-hours)*60
+def calcangle(h,m):
+    if (h<0 or m<0 or h>12 or m>60):
+        return None
+    if h==12:
+        h=0
+    if m==60:
+        m=0
+    hourangle=(h*360)//12+(m*360)//(12*60)
+    minuteangle=6*m
+    angle=abs(hourangle-minuteangle)
+    angle=min(360-angle,angle)
+    return angle
+ans=float(calcangle(hours,minutes))
+print('{0:.2f}'.format(ans))
