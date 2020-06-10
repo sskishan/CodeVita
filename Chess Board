@@ -1,0 +1,23 @@
+t=int(input())
+for i in range(t):
+    n=int(input())
+    rows=n
+    cols=n
+    k=1
+    for i in range(rows):
+        for j in range(cols):
+            if k==1:
+                print('W',end="")
+            else:
+                print('B',end="")
+            k*=-1
+        if cols%2==0:
+            k*=-1
+        print()
+    
+            
+                
+
+
+
+
