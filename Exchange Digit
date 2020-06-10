@@ -1,0 +1,27 @@
+from itertools import permutations
+a,b=map(str,input().split(" "))
+A=list(a)
+A.sort()
+A1=''.join(map(str,A))
+A=[]
+p=permutations(A1)
+i=0
+flag=0
+for i in p:
+    t=int(''.join(map(str,i)))
+    if t>int(b):
+        if len(str(t))==len(a):
+            flag+=1 
+            i=t
+            break
+if flag==1:
+    print(i)
+else:
+    print(-1)
+
+
+
+
+
+
+
