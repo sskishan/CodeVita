@@ -1,0 +1,21 @@
+t=int(input())
+while(t>0):
+    s=input().split()
+    al=[]
+    nu=[]
+    for i in range(len(s)):
+        if i%2==0:
+            al.append(s[i].lower())
+        else:
+            nu.append(int(s[i]))
+    al.sort()
+    nu.sort()
+    for i in range(len(s)//2):
+        print(al[i],nu[i],end=" ")
+    print()
+    t-=1
+    
+
+
+
+
